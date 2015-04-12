@@ -1,5 +1,5 @@
 development: &default
-  adapter: postgresql
+  adapter: mysql
   database: gasi_development
   encoding: utf8
   host: localhost
