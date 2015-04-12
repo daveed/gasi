@@ -1,6 +1,17 @@
 # Gasi
 
+## Description 
+
+'One Stop Before Mars' suggests a mission to find the best asteroids for a more economic solution.
+* A "space version of gas station/ fuel depot" or "Asteroid sustainable energy converter" as a transition spot or a space station, that will allow space ships to recharge in-between their trajectory on the way to Mars. 
+* The asteroid will be suggested by an 'asteroid calculator' simulation, similar to a 'GPS for asteroid converter ' that provides resulting choices of which Asteroid where the spaceships in mission will do its stop. 
+
+
 ## Getting Started
+
+Asteroid data imported from the IAU Minor Planet Center database
+
+    % http://minorplanetcenter.net/mp_properties.sql.gz
 
 After you have cloned this repo, run this setup script to set up your machine
 with the necessary dependencies to run and test this app:
