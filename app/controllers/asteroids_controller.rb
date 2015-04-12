@@ -11,7 +11,7 @@ class AsteroidsController < ApplicationController
 
   # GET /asteroids/1
   def show
-    @asteroids = Mpc.calc_mass_fuel_total(@asteroid.mass)
+    @asteroids = Mpc.calc_mass_fuel_total(@asteroid.mass).slice(0,10)
   end
 
   # GET /asteroids/new
