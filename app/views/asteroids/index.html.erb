@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asteroid Calculator</h1>
+
+<%= simple_form_for @asteroid do |f| %>
+  <%= f.input :mass %>
+  <%= f.button :submit %>
+<% end %>

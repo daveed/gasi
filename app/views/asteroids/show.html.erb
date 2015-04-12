@@ -1,0 +1,11 @@
+
+<% @asteroids.each do |a| %>
+  <%= a[:name] %>
+   |
+  <%= a[:designation] %>
+   |
+  <%= a[:mass_fuel_total] %>
+  <br/>
+<% end %>
+
+<%= link_to 'Back', asteroids_path %>

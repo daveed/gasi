@@ -11,13 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412030427) do
+ActiveRecord::Schema.define(version: 20150412033844) do
+
+  create_table "asteroids", force: :cascade do |t|
+    t.decimal  "mass",       precision: 15, scale: 10
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
 
   create_table "calcs", force: :cascade do |t|
     t.string   "name",            limit: 255
-    t.decimal  "mass_fuel_total",             precision: 10
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.decimal  "mass_fuel_total",             precision: 15, scale: 10
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|

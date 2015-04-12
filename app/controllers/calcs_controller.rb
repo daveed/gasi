@@ -3,7 +3,7 @@ class CalcsController < ApplicationController
 
   # GET /calcs
   def index
-    @calcs = Calc.all
+    @asteroid = Asteroid.new
   end
 
   # GET /calcs/1
