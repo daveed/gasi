@@ -28,7 +28,7 @@ class AsteroidsController < ApplicationController
     @asteroid = Asteroid.new(asteroid_params)
 
     if @asteroid.save
-      redirect_to @asteroid, notice: 'Viable astroids selected'
+      redirect_to @asteroid
     else
       render :new
     end

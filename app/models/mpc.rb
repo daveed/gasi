@@ -48,7 +48,10 @@ class Mpc < ActiveRecord::Base
       # fuelMass3 = (MASS_EQUIP + fuelMass1 + fuelMass2) * (Math::exp(deltaVtoLEO / VELAUNCH) - 1)
       fuelMassTotal = fuelMass1 + fuelMass2 # + fuelMass3
 
-      calc << {name: mpc.n_or_d, designation: mpc.designation, diameter: mpc.diameter, mass_fuel_total: fuelMassTotal.to_f.round(2)}
+      calc << { name: mpc.n_or_d,
+                designation: mpc.designation,
+                diameter: mpc.diameter,
+                mass_fuel_total: fuelMassTotal.to_f.round(2) }
     end
 
     calc.sort_by { |hsh| hsh[:mass_fuel_total] }

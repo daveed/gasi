@@ -1,13 +1,31 @@
-
-<% @asteroids.each do |a| %>
-  <%= a[:name] %>
-   |
-  <%= a[:designation] %>
-   |
-  <%= a[:diameter] %>
-   |
-  <%= a[:mass_fuel_total] %>
-  <br/>
+<%= simple_form_for @asteroid do |f| %>
+  <%= f.input :mass, label: "Asteroid payload (kg)" %>
+  <%= f.button :submit, value: "Find asteroids" %>
 <% end %>
+
+<hr style="border-bottom: 20px solid #000;">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>name</td>
+      <td>designation</td>
+      <td>diameter</td>
+      <td>fuel needed (kg)</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @asteroids.each_with_index do |a,i| %>
+      <tr>
+        <td><%= i + 1 %></td>
+        <td><%= a[:name] %></td>
+        <td><%= a[:designation] %></td>
+        <td><%= a[:diameter] %></td>
+        <td><%= a[:mass_fuel_total] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Back', asteroids_path %>
