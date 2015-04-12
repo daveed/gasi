@@ -20,7 +20,7 @@ class Mpc < ActiveRecord::Base
 
     # step 1 - Delta V from Asteroid to Mars
     # Mpc.where('inclination is not null and semimajor_axis is not null and delta_v is not null').limit(10) do |mpc|
-    Mpc.limit(10).each do |mpc|
+    Mpc.limit(10_000).each do |mpc|
 
       a_inclination = mpc.inclination
       a_midr = mpc.semimajor_axis
@@ -54,7 +54,7 @@ class Mpc < ActiveRecord::Base
       calc << {name: mpc.n_or_d, designation: mpc.designation, mass_fuel_total: fuelMassTotal}
     end
 
-    calc
+    calc.sort_by { |hsh| hsh[:mass_fuel_total] }
   end
 
 end
