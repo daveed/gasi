@@ -37,7 +37,7 @@ class AsteroidsController < ApplicationController
   # PATCH/PUT /asteroids/1
   def update
     if @asteroid.update(asteroid_params)
-      redirect_to @asteroid, notice: 'Asteroid was successfully updated.'
+      redirect_to @asteroid
     else
       render :edit
     end
