@@ -24,6 +24,8 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
+gem "twitter-bootstrap-rails"
+gem "therubyracer"
 
 group :development do
   gem "spring"
